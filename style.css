@@ -1,0 +1,336 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+}
+
+.video-container video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.video-container nav{
+    /* color: white;
+    background-color: dark;
+    font-size: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #333; */
+    background-color: rgba(0, 0, 0, 0.3); /* Add a semi-transparent background color */
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* Place the navbar above the video */
+    transition: background-color 0.3s ease;
+}
+
+.video-container nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.video-container nav li{
+    display: inline-block;
+    margin: 0 15px;
+    padding: 0;
+    color: white;
+}
+
+.video-container nav a{
+    /* text-decoration: none;
+    scroll-behavior: smooth; */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.video-container .logo{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.video-container nav a:hover{
+   color: aqua;
+}
+
+.video-container .menu-line{
+    height: 3px;
+    width: 20px;
+    background-color: black;
+    margin-bottom: 3px;
+}
+
+.video-container .menu{
+    cursor: pointer;
+    display: none; 
+}
+
+.video-container .menu .showmenu{
+    transform: rotate(90deg);
+}
+
+.video-container .container .left {
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background color */
+    padding: 20px;
+    border-radius: 10px; /* Add rounded corners */
+    color: white;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.video-container .container .left:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken the background color on hover */
+}
+
+.video-container .container .left .third-row{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    height: 150px;
+    width: 150px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: transform 0.3s ease; 
+    justify-content: space-around;
+    max-width: 500px;
+}
+
+.video-container .container .left .third-row img{
+    height: 150px;
+    width: 150px;
+}
+
+.video-container .container .left .third-row img:hover {
+    transform: scale(1.1); /* Enlarge the images on hover */
+}
+
+.video-container .container .grid{
+    display: flex;
+    max-width: 500px;
+    background: transparent;
+}
+
+.video-container .container .grid ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    background: transparent;
+}
+
+.video-container .container .grid li{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(245, 142, 236,0.1);
+    color: #fffbfb;
+    border-radius: 15px;
+    transition: tranform 0.3s ease;
+}
+
+.video-container .container .grid li:hover{
+    transform: scale(1.05);
+}
+
+.video-container .container .grid img{
+    height:200px;
+    width:250px;
+    margin:22px;
+}
+
+.video-container .container .right{
+    color: rgb(13, 9, 251);
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(10, 10, 10, 0.75);
+}
+
+.video-container .container .right h2{
+    font-weight: bold;
+    color: antiquewhite;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.video-container .container .right .progress-bar{
+    background: #959595;
+    width: 600px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.video-container .container .right .progress-bar div{
+    height: 10px;
+    border-radius: 5px;
+    width: 0%;
+    background: red;
+}
+
+.video-container .container .right .progress-bar div span{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #222;
+    float: right;
+    margin-top: -15px;
+    margin-right: -20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container .container .right .progress-bar .html{
+    background: #e91e63;
+    animation: html 1s linear forwards;
+}
+
+.video-container .container .right .progress-bar .css{
+    background: #cddc39;
+    animation: css 1s linear forwards;
+}
+
+.video-container .container .right .progress-bar .javascript{
+    background: #00bcd4;
+    animation: javascript 1s linear forwards;
+}
+
+.video-container .container .right .progress-bar .python{
+    background: #ffeb3b;
+    animation: python 1s linear forwards;
+}
+
+.video-container .container .right .progress-bar .c{
+    background: #9c27b0;
+    animation: c 1s linear forwards;
+}
+
+.video-container .container .right .progress-bar .cpp{
+    background: #ea17ae;
+    animation: cpp 1s linear forwards;
+}
+
+.video-container .container .right .progress-bar .html span{
+    border: 1px solid #e91e63;
+}
+
+.video-container .container .right .progress-bar .css span{
+    border: 1px solid #cddc39;
+}
+
+.video-container .container .right .progress-bar .javascript span{
+    border: 1px solid #00bcd4;
+}
+
+.video-container .container .right .progress-bar .python span{
+    border: 1px solid #ffeb3b;
+}
+
+.video-container .container .right .progress-bar .c span{
+    border: 1px solid #9c27b0;
+}
+
+.video-container .container .right .progress-bar .cpp span{
+    border: 1px solid #ea17ae;
+}
+
+@media all and (max-width: 640px){
+    .video-container nav{
+        flex-direction: column;
+    }
+
+    .video-container nav li{
+        display: block;
+        padding: 10px 0;
+    }
+    .video-container ul{
+        text-align: center;
+        padding: 0;
+        display: none;
+    }
+
+    .video-container .logo{
+        align-self: flex-start;
+        margin: 10px 0px 0px 20px;
+    }
+
+    .video-container .menu{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 25px;
+    }
+
+    .video-container .showmenu{
+        display: block;
+    }
+}
+
+@keyframes html{
+    100%{
+        width: 55%;
+    }
+}
+
+@keyframes css{
+    100%{
+        width: 56%;
+    }
+}
+
+@keyframes javascript{
+    100%{
+        width: 45%;
+    }
+}
+
+@keyframes python{
+    100%{
+        width: 69%;
+    }
+}
+
+@keyframes c{
+    100%{
+        width: 53%;
+    }
+}
+
+@keyframes cpp{
+    100%{
+        width: 65%;
+    }
+}
+
+

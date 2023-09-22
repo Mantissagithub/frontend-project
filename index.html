@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <title>M A N T I S</title>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="video (2160p).mp4" type="video/mp4">
+        </video>
+        <nav>
+            <div class="logo">
+                <a href="">MERETRIX</a>
+            </div>
+            <ul>
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#links">LINKS</a></li>
+            </ul>
+            <div class="menu">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="left">
+                <div class="third-row">
+                    <a href="https://www.atlassian.com/software/jira"><img src="planning.png" alt="Planning"></a>
+                    <a href="https://zoom.us/"><img src="online-meeting.png" alt="Meet"></a>
+                </div>
+                <div class="grid">
+                    <ul>
+                        <li>
+                            <div class="gallery">
+                                <a href="developing.png">
+                                    <img src="developing.png" alt="Under Development">
+                                </a>
+                                <div class="desc">
+                                    <h3><b>UNDER DEVELOPMENT</b></h3>
+                                    <p>Exciting new project underway! Stay tuned for updates as we work diligently on its development</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="gallery">
+                                <a href="bug.png">
+                                    <img src="bug.png" alt="Software Testing">
+                                </a>
+                                <div class="desc">
+                                    <h3><b>SOFTWARE TESTING</b></h3>
+                                        <p>Software testing ensures quality by detecting and fixing issues before deploying the final product</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right">
+                <div class="skills" data-aos="fade-up">
+                    <h2>HTML</h2>
+                    <div class="progress-bar">
+                        <div class="html"><span>55%</span></div>
+                    </div>
+                </div>
+                <div class="skills" data-aos="fade-up">
+                    <h2>CSS</h2>
+                    <div class="progress-bar">
+                        <div class="css"><span>56%</span></div>
+                    </div>
+                </div>
+                <div class="skills" data-aos="fade-up">
+                    <h2>JAVASCRIPT</h2>
+                    <div class="progress-bar">
+                        <div class="javascript"><span>45%</span></div>
+                    </div>
+                </div>
+                <div class="skills" data-aos="fade-up">
+                    <h2>Python</h2>
+                    <div class="progress-bar">
+                        <div class="python"><span>69%</span></div>
+                    </div>
+                </div>
+                <div class="skills" data-aos="fade-up">
+                    <h2>C</h2>
+                    <div class="progress-bar">
+                        <div class="c"><span>53%</span></div>
+                    </div>
+                </div>
+                <div class="skills" data-aos="fade-up">
+                    <h2>C++</h2>
+                    <div class="progress-bar">
+                        <div class="cpp"><span>65%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+    const menu = document.querySelector('.menu')
+    const menuList = document.querySelector('nav ul')
+    menu.addEventListener('click',()=>{
+        menuList.classList.toggle('showmenu');
+    })
+</script>
+</html>
